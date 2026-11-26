@@ -1,0 +1,17 @@
+# Cópias de cada etapa do visual (o histórico agora fica no Git)
+versoes/
+
+# Referências visuais: imagens de terceiros e o enunciado. Ficam só na máquina.
+# O ferramentas/psx.py precisa delas para regenerar as imagens.
+referencias/
+
+# Anotações pessoais de acompanhamento (não versionar)
+O-QUE-FALTA.md
+GUIA-JS.md
+
+# Sistema e ferramentas
+__pycache__/
+*.Zone.Identifier
+.DS_Store
+Thumbs.db
+.vscode/

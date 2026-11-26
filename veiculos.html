@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veículos: Disco 5</title>
+  <meta name="description" content="Disco 5 de 6: Speeders, walkers e transportes de superfície.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800&family=Saira:wght@400;500;600&family=VT323&display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-recurso="vehicles">
+  <a class="visually-hidden-focusable pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <svg width="0" height="0" class="position-absolute" aria-hidden="true" focusable="false">
+    <symbol id="cabo" viewBox="0 0 64 16">
+      <rect x="0" y="4" width="5" height="8" rx="1.5" fill="#55595f"/>
+      <rect x="5" y="3" width="15" height="10" rx="1" fill="#c9ccd2"/>
+      <rect x="5" y="3" width="15" height="3" fill="#eef0f3"/>
+      <rect x="20" y="3.5" width="22" height="9" fill="#1b1d21"/>
+      <g fill="#3a3e45"><rect x="22" y="3.5" width="2" height="9"/><rect x="26" y="3.5" width="2" height="9"/><rect x="30" y="3.5" width="2" height="9"/><rect x="34" y="3.5" width="2" height="9"/><rect x="38" y="3.5" width="2" height="9"/></g>
+      <rect x="42" y="3" width="10" height="10" fill="#c9ccd2"/>
+      <rect x="42" y="3" width="10" height="3" fill="#eef0f3"/>
+      <rect x="45" y="1.5" width="4" height="2" rx=".5" fill="#d8312a"/>
+      <path d="M52 2h9l3 2v8l-3 2h-9z" fill="#9a9ea6"/>
+      <path d="M52 2h9l3 2v1.5H52z" fill="#dfe2e7"/>
+    </symbol>
+  </svg>
+
+  <header class="topo fixed-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Principal">
+      <div class="container-xxl">
+        <a class="navbar-brand" href="index.html">Star Wars <span class="rotulo-disco">Disco 5</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="toggler-linhas" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="personagens.html">Personagens</a></li>
+            <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
+            <li class="nav-item"><a class="nav-link" href="especies.html">Espécies</a></li>
+            <li class="nav-item"><a class="nav-link" href="planetas.html">Planetas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="veiculos.html" aria-current="page">Veículos</a></li>
+            <li class="nav-item"><a class="nav-link" href="naves.html">Naves</a></li>
+          </ul>
+          <!-- Busca geral: só visual, aguardando decisão sobre o RF06 -->
+          <form class="busca-topo" role="search">
+            <label class="visually-hidden" for="busca-geral">Buscar em todos os discos</label>
+            <input class="busca-topo-campo" id="busca-geral" type="search" placeholder="Buscar em todos os discos" autocomplete="off" spellcheck="false">
+        </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="capa" aria-labelledby="titulo">
+      <div class="capa-cena" aria-hidden="true"></div>
+      <h1 class="capa-titulo" id="titulo" style="--letras: 8">Veículos</h1>
+      <div class="holo" aria-hidden="true">
+        <span class="holo-feixe"></span>
+        <div class="holo-conteudo">
+          <img src="assets/img/holo/veiculos.png" alt="">
+        </div>
+        <span class="holo-base"></span>
+      </div>
+      <div class="container-xxl capa-base">
+        <div class="capa-info">
+          <p class="capa-numero">Disco 5 de 6</p>
+          <p class="capa-legenda">Speeders, walkers e transportes de superfície.</p>
+          <p class="capa-contagem" data-contagem="vehicles" aria-live="polite"></p>
+        </div>
+        <form class="busca" role="search">
+          <label class="busca-rotulo" for="busca">Buscar veículo pelo nome</label>
+          <input class="busca-campo" id="busca" type="search" autocomplete="off" spellcheck="false">
+        </form>
+      </div>
+    </section>
+
+    <section class="secao secao-lista" aria-label="Lista de veículos">
+      <div class="container-xxl">
+        <ul class="lista lista-veiculos" data-lista="vehicles"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape rodape-galaxia">
+    <div class="container-xxl rodape-grade">
+      <p class="rodape-fim">Fim do disco 5</p>
+      <div>
+        <p>Projeto acadêmico de ARQPGW2, IFSP Araraquara. Dados: <a href="https://swapi.info">swapi.info</a>.</p>
+        <p>Star Wars e suas imagens pertencem à Lucasfilm. Site de fã, sem vínculo oficial.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="modal-detalhe" tabindex="-1" aria-labelledby="modal-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-cabeca">
+            <p class="modal-tipo" data-tipo></p>
+            <h2 class="modal-title" id="modal-titulo"></h2>
+          </div>
+          <button type="button" class="modal-fechar" data-bs-dismiss="modal" aria-label="Fechar"><span aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-ficha">
+            <div class="modal-imagem" data-imagem></div>
+            <dl class="campos" data-campos></dl>
+          </div>
+          <div class="letreiro" data-abertura hidden tabindex="0" aria-label="Texto de abertura"><p lang="en"></p></div>
+          <section class="modal-conexoes" aria-labelledby="modal-conexoes-titulo">
+            <h3 class="modal-subtitulo" id="modal-conexoes-titulo">Conexões</h3>
+            <dl class="relacoes" data-relacoes></dl>
+          </section>
+          <dl class="registro" data-registro></dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card" id="memory-card" role="status" hidden>
+    <span class="memory-card-icone" aria-hidden="true"></span>
+    <span>Memory card<br><span data-texto></span></span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/pagina-disco.js"></script>
+</body>
+</html>
