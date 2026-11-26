@@ -32,11 +32,11 @@
   <header class="topo fixed-top">
     <nav class="navbar navbar-expand-lg" aria-label="Principal">
       <div class="container-xxl">
-        <a class="navbar-brand" href="index.html">Star Wars <span class="rotulo-disco">Disco 2</span></a>
+        <a class="navbar-brand d-flex align-items-center m-0 text-uppercase lh-1" href="index.html">Star Wars <span class="rotulo-disco">Disco 2</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
-          <span class="toggler-linhas" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="toggler-linhas d-grid" aria-hidden="true"><i></i><i></i><i></i></span>
         </button>
-        <div class="collapse navbar-collapse" id="menu">
+        <div class="collapse navbar-collapse align-items-center" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="personagens.html">Personagens</a></li>
             <li class="nav-item"><a class="nav-link active" href="filmes.html" aria-current="page">Filmes</a></li>
@@ -46,7 +46,7 @@
             <li class="nav-item"><a class="nav-link" href="naves.html">Naves</a></li>
           </ul>
           <!-- Busca geral: só visual, aguardando decisão sobre o RF06 -->
-          <form class="busca-topo" role="search">
+          <form class="busca-topo position-relative flex-shrink-0" role="search">
             <label class="visually-hidden" for="busca-geral">Buscar em todos os discos</label>
             <input class="busca-topo-campo" id="busca-geral" type="search" placeholder="Buscar em todos os discos" autocomplete="off" spellcheck="false">
         </form>
@@ -56,38 +56,38 @@
   </header>
 
   <main id="conteudo">
-    <section class="capa" aria-labelledby="titulo">
+    <section class="capa position-relative overflow-hidden d-flex align-items-end" aria-labelledby="titulo">
       <div class="capa-cena" aria-hidden="true"></div>
-      <h1 class="capa-titulo" id="titulo" style="--letras: 6">Filmes</h1>
-      <div class="holo" aria-hidden="true">
-        <span class="holo-feixe"></span>
-        <div class="holo-conteudo">
-          <div class="holo-letreiro"><p>Episódio I<br>A Ameaça Fantasma<br><br>Episódio II<br>Ataque dos Clones<br><br>Episódio III<br>A Vingança dos Sith<br><br>Episódio IV<br>Uma Nova Esperança<br><br>Episódio V<br>O Império Contra-Ataca<br><br>Episódio VI<br>O Retorno de Jedi</p></div>
+      <h1 class="capa-titulo position-absolute start-0 end-0 m-0 text-center text-nowrap" id="titulo" style="--letras: 6">Filmes</h1>
+      <div class="holo position-absolute z-1 start-50 m-0 translate-middle-x" aria-hidden="true">
+        <span class="holo-feixe position-absolute"></span>
+        <div class="holo-conteudo position-absolute d-grid">
+          <div class="holo-letreiro position-relative w-100 h-100 overflow-hidden"><p>Episódio I<br>A Ameaça Fantasma<br><br>Episódio II<br>Ataque dos Clones<br><br>Episódio III<br>A Vingança dos Sith<br><br>Episódio IV<br>Uma Nova Esperança<br><br>Episódio V<br>O Império Contra-Ataca<br><br>Episódio VI<br>O Retorno de Jedi</p></div>
         </div>
-        <span class="holo-base"></span>
+        <span class="holo-base position-absolute"></span>
       </div>
-      <div class="container-xxl capa-base">
+      <div class="container-xxl capa-base position-relative z-2 d-flex flex-wrap justify-content-between flex-column flex-lg-row align-items-stretch align-items-lg-end">
         <div class="capa-info">
-          <p class="capa-numero">Disco 2 de 6</p>
-          <p class="capa-legenda">Do Episódio I ao VI.</p>
+          <p class="capa-numero mb-2">Disco 2 de 6</p>
+          <p class="capa-legenda m-0">Do Episódio I ao VI.</p>
           <p class="capa-contagem" data-contagem="films" aria-live="polite"></p>
         </div>
-        <form class="busca" role="search">
+        <form class="busca d-grid" role="search">
           <label class="busca-rotulo" for="busca">Buscar filme pelo nome</label>
           <input class="busca-campo" id="busca" type="search" autocomplete="off" spellcheck="false">
         </form>
       </div>
     </section>
 
-    <section class="secao secao-lista" aria-label="Lista de filmes">
+    <section class="secao secao-lista pt-3" aria-label="Lista de filmes">
       <div class="container-xxl">
-        <ul class="lista lista-filmes" data-lista="films"></ul>
+        <ul class="lista lista-filmes list-unstyled m-0" data-lista="films"></ul>
       </div>
     </section>
   </main>
 
   <footer class="rodape rodape-galaxia">
-    <div class="container-xxl rodape-grade">
+    <div class="container-xxl rodape-grade d-flex flex-wrap justify-content-between align-items-end">
       <p class="rodape-fim">Fim do disco 2</p>
       <div>
         <p>Projeto acadêmico de ARQPGW2, IFSP Araraquara. Dados: <a href="https://swapi.info">swapi.info</a>.</p>
@@ -99,30 +99,30 @@
   <div class="modal fade" id="modal-detalhe" tabindex="-1" aria-labelledby="modal-titulo" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-sm-down">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header align-items-end gap-3">
           <div class="modal-cabeca">
             <p class="modal-tipo" data-tipo></p>
             <h2 class="modal-title" id="modal-titulo"></h2>
           </div>
-          <button type="button" class="modal-fechar" data-bs-dismiss="modal" aria-label="Fechar"><span aria-hidden="true"></span></button>
+          <button type="button" class="modal-fechar position-relative flex-shrink-0 align-self-start" data-bs-dismiss="modal" aria-label="Fechar"><span aria-hidden="true"></span></button>
         </div>
-        <div class="modal-body">
-          <div class="modal-ficha">
-            <div class="modal-imagem" data-imagem></div>
-            <dl class="campos" data-campos></dl>
+        <div class="modal-body d-grid">
+          <div class="modal-ficha d-grid align-items-start">
+            <div class="modal-imagem position-relative" data-imagem></div>
+            <dl class="campos m-0 d-grid align-content-start" data-campos></dl>
           </div>
-          <div class="letreiro" data-abertura hidden tabindex="0" aria-label="Texto de abertura"><p lang="en"></p></div>
+          <div class="letreiro position-relative overflow-hidden" data-abertura hidden tabindex="0" aria-label="Texto de abertura"><p lang="en"></p></div>
           <section class="modal-conexoes" aria-labelledby="modal-conexoes-titulo">
-            <h3 class="modal-subtitulo" id="modal-conexoes-titulo">Conexões</h3>
-            <dl class="relacoes" data-relacoes></dl>
+            <h3 class="modal-subtitulo d-flex align-items-center gap-3" id="modal-conexoes-titulo">Conexões</h3>
+            <dl class="relacoes m-0 d-grid" data-relacoes></dl>
           </section>
-          <dl class="registro" data-registro></dl>
+          <dl class="registro m-0 d-flex flex-wrap" data-registro></dl>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="memory-card" id="memory-card" role="status" hidden>
+  <div class="memory-card position-fixed" id="memory-card" role="status" hidden>
     <span class="memory-card-icone" aria-hidden="true"></span>
     <span>Memory card<br><span data-texto></span></span>
   </div>

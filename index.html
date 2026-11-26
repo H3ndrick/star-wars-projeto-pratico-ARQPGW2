@@ -32,11 +32,11 @@
   <header class="topo fixed-top">
     <nav class="navbar navbar-expand-lg" aria-label="Principal">
       <div class="container-xxl">
-        <a class="navbar-brand" href="index.html">Star Wars <span class="rotulo-disco">Menu</span></a>
+        <a class="navbar-brand d-flex align-items-center m-0 text-uppercase lh-1" href="index.html">Star Wars <span class="rotulo-disco">Menu</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
-          <span class="toggler-linhas" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="toggler-linhas d-grid" aria-hidden="true"><i></i><i></i><i></i></span>
         </button>
-        <div class="collapse navbar-collapse" id="menu">
+        <div class="collapse navbar-collapse align-items-center" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="personagens.html">Personagens</a></li>
             <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
@@ -46,7 +46,7 @@
             <li class="nav-item"><a class="nav-link" href="naves.html">Naves</a></li>
           </ul>
           <!-- Busca geral: só visual, aguardando decisão sobre o RF06 -->
-          <form class="busca-topo" role="search">
+          <form class="busca-topo position-relative flex-shrink-0" role="search">
             <label class="visually-hidden" for="busca-geral">Buscar em todos os discos</label>
             <input class="busca-topo-campo" id="busca-geral" type="search" placeholder="Buscar em todos os discos" autocomplete="off" spellcheck="false">
           </form>
@@ -56,32 +56,32 @@
   </header>
 
   <main id="conteudo">
-    <section class="abertura" data-luz="vermelha" aria-labelledby="titulo">
-      <div class="palco">
+    <section class="abertura position-relative overflow-hidden d-flex align-items-end" data-luz="vermelha" aria-labelledby="titulo">
+      <div class="palco position-absolute">
         <img class="cena" src="assets/img/home/corredor.png" alt="">
-        <h1 class="titulo" id="titulo"><span>Star</span> <span>Wars</span></h1>
+        <h1 class="titulo position-absolute m-0 d-grid" id="titulo"><span>Star</span> <span>Wars</span></h1>
         <img class="cena frente" src="assets/img/home/vader.png" alt="Darth Vader em silhueta, com o sabre aceso, em um corredor enevoado">
       </div>
-      <div class="container-xxl abertura-base">
-        <nav class="menu-dvd" aria-label="Menu do disco">
-          <span class="cursor" aria-hidden="true">
-            <svg class="cursor-cabo"><use href="#cabo"/></svg><i class="cursor-lamina"></i>
+      <div class="container-xxl abertura-base d-flex flex-wrap justify-content-between align-items-end">
+        <nav class="menu-dvd position-relative d-grid" aria-label="Menu do disco">
+          <span class="cursor position-absolute start-0 d-flex align-items-center pe-none" aria-hidden="true">
+            <svg class="cursor-cabo flex-shrink-0"><use href="#cabo"/></svg><i class="cursor-lamina flex-grow-1"></i>
           </span>
-          <a class="ativa" data-luz="vermelha" href="personagens.html"><span class="menu-rotulo">Personagens</span><span class="menu-legenda">Disco 1 · Heróis, vilões e droides da saga</span></a>
-          <a data-luz="amarela" href="filmes.html"><span class="menu-rotulo">Filmes</span><span class="menu-legenda">Disco 2 · Do Episódio I ao VI</span></a>
-          <a data-luz="verde" href="especies.html"><span class="menu-rotulo">Espécies</span><span class="menu-legenda">Disco 3 · Humanos, wookiees, hutts e outros povos</span></a>
-          <a data-luz="areia" href="planetas.html"><span class="menu-rotulo">Planetas</span><span class="menu-legenda">Disco 4 · Desertos, pântanos e gigantes gasosos</span></a>
-          <a data-luz="roxa" href="veiculos.html"><span class="menu-rotulo">Veículos</span><span class="menu-legenda">Disco 5 · Speeders, walkers e transportes de superfície</span></a>
-          <a data-luz="azul" href="naves.html"><span class="menu-rotulo">Naves</span><span class="menu-legenda">Disco 6 · Cargueiros, caças e cruzadores</span></a>
+          <a class="ativa d-grid text-decoration-none" data-luz="vermelha" href="personagens.html"><span class="menu-rotulo">Personagens</span><span class="menu-legenda">Disco 1 · Heróis, vilões e droides da saga</span></a>
+          <a class="d-grid text-decoration-none" data-luz="amarela" href="filmes.html"><span class="menu-rotulo">Filmes</span><span class="menu-legenda">Disco 2 · Do Episódio I ao VI</span></a>
+          <a class="d-grid text-decoration-none" data-luz="verde" href="especies.html"><span class="menu-rotulo">Espécies</span><span class="menu-legenda">Disco 3 · Humanos, wookiees, hutts e outros povos</span></a>
+          <a class="d-grid text-decoration-none" data-luz="areia" href="planetas.html"><span class="menu-rotulo">Planetas</span><span class="menu-legenda">Disco 4 · Desertos, pântanos e gigantes gasosos</span></a>
+          <a class="d-grid text-decoration-none" data-luz="roxa" href="veiculos.html"><span class="menu-rotulo">Veículos</span><span class="menu-legenda">Disco 5 · Speeders, walkers e transportes de superfície</span></a>
+          <a class="d-grid text-decoration-none" data-luz="azul" href="naves.html"><span class="menu-rotulo">Naves</span><span class="menu-legenda">Disco 6 · Cargueiros, caças e cruzadores</span></a>
         </nav>
-        <p class="abertura-texto">Há muito tempo, numa galáxia muito, muito distante&hellip;</p>
+        <p class="abertura-texto m-0">Há muito tempo, numa galáxia muito, muito distante&hellip;</p>
       </div>
     </section>
 
   </main>
 
   <footer class="rodape rodape-galaxia">
-    <div class="container-xxl rodape-grade">
+    <div class="container-xxl rodape-grade d-flex flex-wrap justify-content-between align-items-end">
       <p class="rodape-marca">Star Wars</p>
       <div>
         <p>Projeto acadêmico de ARQPGW2, IFSP Araraquara. Dados: <a href="https://swapi.info">swapi.info</a>.</p>
