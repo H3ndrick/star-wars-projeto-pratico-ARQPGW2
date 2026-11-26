@@ -147,8 +147,8 @@ def paleta(terreno):
     return ["2a2438", "4a4060", "7a6f94", "b9b0d4"], False
 
 
-# planetas a partir da cópia local dos dados (js/dados-exemplo.js)
-texto = (RAIZ / "js" / "dados-exemplo.js").read_text(encoding="utf-8")
+# planetas a partir da cópia local dos dados (assets/js/dados-exemplo.js)
+texto = (RAIZ / "assets" / "js" / "dados-exemplo.js").read_text(encoding="utf-8")
 for p in json.loads(texto.split("export const exemplo = ", 1)[1].rstrip().rstrip(";"))["planets"]:
         pid = int(p["url"].rstrip("/").split("/")[-1])
         cores, faixas = paleta(p["terrain"])
@@ -161,7 +161,7 @@ def manifesto():
               "planets": "planetas", "vehicles": "veiculos", "starships": "naves"}
     dados = {r: sorted(int(f.stem) for f in (OUT / d).glob("*.png") if f.stem.isdigit()) if (OUT / d).exists() else []
              for r, d in pastas.items()}
-    (RAIZ / "js" / "imagens.js").write_text(
+    (RAIZ / "assets" / "js" / "imagens.js").write_text(
         "// Gerado por ferramentas/psx.py: ids que têm imagem em assets/img.\n"
         f"export const imagens = {json.dumps(dados)};\n", encoding="utf-8")
 
@@ -320,7 +320,7 @@ capas()
 
 def previa():
     """Imagens provisórias para ver o design com todos os cards preenchidos.
-    Recortes das referências; o site só usa se PREVIA = true em js/previa.js."""
+    Recortes das referências; o site só usa se PREVIA = true em assets/js/previa.js."""
     import shutil
     pasta = OUT / "previa"
     shutil.rmtree(pasta, ignore_errors=True)
@@ -346,7 +346,7 @@ def previa():
         for n, (arquivo, caixa) in enumerate(lista):
             corte(arquivo, caixa, tam, f"previa/{recurso}/{n}.png")
         total[recurso] = len(lista)
-    (RAIZ / "js" / "previa.js").write_text(
+    (RAIZ / "assets" / "js" / "previa.js").write_text(
         "// Modo prévia: preenche cards sem imagem com recortes provisórios das referências.\n"
         "// Para desligar, troque para false (ou apague este arquivo e o import em interface.js).\n"
         "export const PREVIA = true;\n"

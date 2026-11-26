@@ -16,7 +16,7 @@
   --topo: 4.25rem;
 }
 html { scroll-padding-top: calc(var(--topo) + 1rem); }
-body { background: var(--espaco) url("../assets/img/home/estrelas.png") 0 0 / 320px fixed; color: var(--osso); font-family: var(--texto); }
+body { background: var(--espaco) url("../img/home/estrelas.png") 0 0 / 320px fixed; color: var(--osso); font-family: var(--texto); }
 h1, h2 { font-family: var(--titulo); font-weight: 800; text-transform: uppercase; line-height: .9; text-wrap: balance; }
 img { image-rendering: pixelated; }
 :focus-visible { outline: 3px solid var(--osso); outline-offset: 3px; }
@@ -168,7 +168,7 @@ img { image-rendering: pixelated; }
 .modal.fade .modal-dialog { transform: none; transition: none; }
 .modal.show .modal-content { animation: ligar .38s cubic-bezier(.2, .8, .2, 1); }
 @keyframes ligar { 0% { transform: scale(.55, .004); filter: brightness(4); } 40% { transform: scale(1, .004); filter: brightness(3); } 100% { transform: none; filter: none; } }
-.modal-content { position: relative; background: var(--casco) url("../assets/img/home/estrelas.png") 0 0 / 320px; clip-path: polygon(26px 0, 100% 0, 100% calc(100% - 26px), calc(100% - 26px) 100%, 0 100%, 0 26px); }
+.modal-content { position: relative; background: var(--casco) url("../img/home/estrelas.png") 0 0 / 320px; clip-path: polygon(26px 0, 100% 0, 100% calc(100% - 26px), calc(100% - 26px) 100%, 0 100%, 0 26px); }
 .modal-content::before { content: ""; position: absolute; z-index: 2; top: 0; left: 26px; right: 0; height: 3px; background: var(--luz); box-shadow: 0 0 12px 1px var(--luz); }
 .modal-header { align-items: flex-end; gap: 1rem; padding: 1.75rem 1.75rem 1.25rem; border-bottom: 1px solid var(--junta); background: radial-gradient(42rem 12rem at 0 0, color-mix(in srgb, var(--luz) 16%, transparent), transparent 75%); }
 .modal-cabeca { flex: 1; min-width: 0; }
@@ -214,7 +214,7 @@ a.etiqueta:focus-visible { outline: none; background: var(--osso); color: var(--
   .modal-content::before { left: 0; }
 }
 @media (max-width: 400px) { .campos { grid-template-columns: minmax(0, 1fr); } }
-.letreiro { height: 300px; overflow: hidden; background: #000 url("../assets/img/home/estrelas.png") 0 0 / 320px; perspective: 260px; position: relative; }
+.letreiro { height: 300px; overflow: hidden; background: #000 url("../img/home/estrelas.png") 0 0 / 320px; perspective: 260px; position: relative; }
 .letreiro p { position: absolute; left: 0; right: 0; bottom: 0; width: min(30rem, 78%); margin: auto; white-space: pre-line; text-align: center; font-weight: 600; font-size: 1.25rem; color: #ffd43b; transform-origin: 50% 100%; transform: rotateX(22deg); animation: letreiro 45s linear infinite; }
 .letreiro:is(:hover, :focus) p { animation-play-state: paused; }
 @keyframes letreiro { from { transform: rotateX(22deg) translateY(55%); } to { transform: rotateX(22deg) translateY(-130%); } }
@@ -258,12 +258,12 @@ a.etiqueta:focus-visible { outline: none; background: var(--osso); color: var(--
 /* sombra atrás do holograma: a projeção azul precisa de fundo escuro para aparecer */
 .capa::before { content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none; background: radial-gradient(ellipse 26cqh 38cqh at 50% 56%, rgb(4 6 12 / .75), rgb(4 6 12 / .35) 55%, transparent 80%); }
 /* cena de cada disco; o brilho de cada uma é ajustado para o título e o holograma aparecerem */
-[data-recurso="people"] .capa-cena { background-image: url("../assets/img/capas/people.png"); background-position: 50% 40%; filter: brightness(.85) saturate(1.1); }
-[data-recurso="films"] .capa-cena { background-image: url("../assets/img/capas/films.png"); filter: brightness(.75); }
-[data-recurso="species"] .capa-cena { background-image: url("../assets/img/capas/species.png"); background-position: 50% 35%; filter: brightness(.62) saturate(1.1); }
-[data-recurso="planets"] .capa-cena { background-image: url("../assets/img/capas/planets.png"); background-position: 50% 40%; filter: brightness(.48) saturate(1.1); }
-[data-recurso="vehicles"] .capa-cena { background-image: url("../assets/img/capas/vehicles.png"); background-position: 60% 50%; filter: brightness(.45) saturate(1.1); }
-[data-recurso="starships"] .capa-cena { background-image: url("../assets/img/capas/starships.png"); background-position: 62% 30%; filter: brightness(.78) saturate(1.1); }
+[data-recurso="people"] .capa-cena { background-image: url("../img/capas/people.png"); background-position: 50% 40%; filter: brightness(.85) saturate(1.1); }
+[data-recurso="films"] .capa-cena { background-image: url("../img/capas/films.png"); filter: brightness(.75); }
+[data-recurso="species"] .capa-cena { background-image: url("../img/capas/species.png"); background-position: 50% 35%; filter: brightness(.62) saturate(1.1); }
+[data-recurso="planets"] .capa-cena { background-image: url("../img/capas/planets.png"); background-position: 50% 40%; filter: brightness(.48) saturate(1.1); }
+[data-recurso="vehicles"] .capa-cena { background-image: url("../img/capas/vehicles.png"); background-position: 60% 50%; filter: brightness(.45) saturate(1.1); }
+[data-recurso="starships"] .capa-cena { background-image: url("../img/capas/starships.png"); background-position: 62% 30%; filter: brightness(.78) saturate(1.1); }
 .capa::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(rgb(7 9 15 / .55), transparent 22%), linear-gradient(transparent 55%, rgb(7 9 15 / .82) 80%, var(--espaco)); }
 .capa-titulo { position: absolute; z-index: -2; left: 0; right: 0; top: calc(var(--topo) + 6cqh); margin: 0; padding-inline: 16px; text-align: center; white-space: nowrap;
   font-size: min(calc((100cqw - 32px) / (var(--letras) * .46)), 40cqh); line-height: .8; color: var(--osso); text-shadow: 0 .02em 0 rgb(0 0 0 / .3); }
